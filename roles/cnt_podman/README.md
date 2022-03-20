@@ -1,15 +1,3 @@
----
-title: "Ansible Role: serdigital64.container.cnt_podman"
-description: "Manage provisioning of Podman"
-authors:
-  - SerDigital64
-tags:
-  - ansible
-  - devops
-  - linux
-  - automation
----
-
 # Ansible Role: serdigital64.container.cnt_podman
 
 ## Purpose
