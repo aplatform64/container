@@ -1,0 +1,19 @@
+---
+# Shared test variables
+# test_user: "test_cnt_kubectl"
+# test_group: "test_cnt_kubectl"
+# test_home: "/home/test_cnt_kubectl"
+# test_cnt_kubectl_setup_users:
+#   - user: "{{ test_user }}"
+#     home: "{{ test_home }}"
+# test_cnt_kubectl_application_brew:
+#   name: "kubectl"
+#   type: "brew"
+#   version: "latest"
+#   installed: true
+# test_cnt_kubectl_application_flatpak:
+#   name: "kubectl"
+#   type: "flatpak"
+#   version: "latest"
+#   installed: true
+...

@@ -1,0 +1,31 @@
+---
+# Define platform specific paths
+cnt_kubectl_base:
+  paths: "{{ cnt_kubectl_base_common['paths'] }}"
+  access: "{{ cnt_kubectl_base_common['access'] }}"
+  run:
+    kubectl: "/usr/bin/kubectl"
+
+# Define application package details
+cnt_kubectl_profiles:
+  distro:
+    latest:
+      supported: true
+      origin: kubernetes
+      packages:
+        - name: "kubectl"
+
+# Define custom package repositories
+cnt_kubectl_repository_custom_yum: []
+cnt_kubectl_repository_custom_apt:
+  - name: "kubernetes"
+    suite: "kubernetes-xenial"
+    component: "main"
+    url: "https://apt.kubernetes.io"
+    pgpkey: "https://packages.cloud.google.com/apt/doc/apt-key.gpg"
+
+# Set package repositories states
+cnt_kubectl_repository_catalog_yum: {}
+cnt_kubectl_repository_catalog_apt:
+  kubernetes: true
+...
