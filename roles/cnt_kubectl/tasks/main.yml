@@ -1,0 +1,16 @@
+---
+- name: "Container / KubeCtl / Initialize"
+  ansible.builtin.include_tasks:
+    file: "cnt_kubectl_initialize.yml"
+
+- name: "Container / KubeCtl / Deploy"
+  ansible.builtin.include_tasks:
+    file: "cnt_kubectl_deploy.yml"
+  when:
+    - cnt_kubectl['deploy'] is defined
+    - cnt_kubectl['deploy']
+
+- name: "Container / KubeCtl / Finalize"
+  ansible.builtin.include_tasks:
+    file: "cnt_kubectl_finalize.yml"
+...

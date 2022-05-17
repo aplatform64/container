@@ -1,0 +1,30 @@
+---
+# Define platform specific paths
+cnt_kubectl_base:
+  paths: "{{ cnt_kubectl_base_common['paths'] }}"
+  access: "{{ cnt_kubectl_base_common['access'] }}"
+  run:
+    kubectl: "/usr/bin/kubectl"
+
+# Define application package details
+cnt_kubectl_profiles:
+  distro:
+    latest:
+      supported: true
+      origin: kubernetes
+      packages:
+        - name: "kubectl"
+
+# Define custom package repositories
+cnt_kubectl_repository_custom_yum:
+  - name: "kubernetes"
+    description: "kubernetes"
+    url: "https://packages.cloud.google.com/yum/repos/kubernetes-el7-x86_64"
+    gpgkey: "https://packages.cloud.google.com/yum/doc/yum-key.gpg"
+cnt_kubectl_repository_custom_apt: []
+
+# Set package repositories states
+cnt_kubectl_repository_catalog_yum:
+  kubernetes: true
+cnt_kubectl_repository_catalog_apt: {}
+...

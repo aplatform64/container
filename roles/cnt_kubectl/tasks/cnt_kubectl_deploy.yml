@@ -1,0 +1,19 @@
+---
+- name: "Container / KubeCtl / Deploy / Check required parameters"
+  ansible.builtin.assert:
+    fail_msg: "Required end-state parameters are missing ({{ cnt_kubectl_application | default('cnt_kubectl_application') }})"
+    quiet: true
+    that:
+      - cnt_kubectl_application is defined
+      - cnt_kubectl_application | length > 0
+      - cnt_kubectl_application['name'] is defined
+      - cnt_kubectl_application['type'] is defined
+      - cnt_kubectl_application['version'] is defined
+      - cnt_kubectl_application['installed'] is defined
+
+- name: "Container / KubeCtl / Deploy / Package"
+  ansible.builtin.include_tasks:
+    file: "cnt_kubectl_deploy_package.yml"
+  when:
+    - cnt_kubectl_application is defined
+...

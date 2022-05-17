@@ -1,0 +1,5 @@
+---
+cnt_kubectl:
+  resolve_prereq: false
+  deploy: false
+...
