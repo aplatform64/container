@@ -4,10 +4,14 @@ cnt_kubectl_base:
   paths: "{{ cnt_kubectl_base_common['paths'] }}"
   access: "{{ cnt_kubectl_base_common['access'] }}"
   run:
-    kubectl: "/usr/bin/kubectl"
+    distro:
+      kubectl: "/usr/bin/kubectl"
+    brew:
+      kubectl: "/home/linuxbrew/.linuxbrew/bin/kubectl"
 
 # Define application package details
 cnt_kubectl_profiles:
+  brew: "{{ cnt_kubectl_profiles_common['brew'] }}"
   distro:
     latest:
       supported: true
