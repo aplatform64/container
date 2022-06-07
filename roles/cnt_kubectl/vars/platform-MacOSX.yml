@@ -4,9 +4,19 @@ cnt_kubectl_base:
   paths: "{{ cnt_kubectl_base_common['paths'] }}"
   access: "{{ cnt_kubectl_base_common['access'] }}"
   run:
-    kubectl: "/usr/bin/kubectl"
+    distro: {}
+    brew:
+      kubectl: "/opt/homebrew/bin/kubectl"
 
 # Define application package details
 cnt_kubectl_profiles:
   brew: "{{ cnt_kubectl_profiles_common['brew'] }}"
+
+# Define custom package repositories
+cnt_kubectl_repository_custom_yum: []
+cnt_kubectl_repository_custom_apt: []
+
+# Set package repositories states
+cnt_kubectl_repository_catalog_yum: {}
+cnt_kubectl_repository_catalog_apt: {}
 ...
