@@ -17,7 +17,7 @@ cnt_kubectl_platforms:
   - "MacOSX12"
 
 # Group Linux Distributions by family
-cnt_kubectl_os_family: "
+cnt_kubectl_os_family: |
   {%- if
       ( ansible_distribution == 'CentOS' ) or
       ( ansible_distribution == 'RedHat' ) or
@@ -39,7 +39,6 @@ cnt_kubectl_os_family: "
   {%- else -%}
     {{ 'NotSupported' }}
   {%- endif -%}
-  "
 
 # Multiplatform packages
 cnt_kubectl_profiles_common:

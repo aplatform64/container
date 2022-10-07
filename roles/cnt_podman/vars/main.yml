@@ -14,7 +14,7 @@ cnt_podman_platforms:
   - "Debian10"
   - "Debian11"
 
-cnt_podman_os_family: "
+cnt_podman_os_family: |
   {%- if
       ( ansible_distribution == 'CentOS' ) or
       ( ansible_distribution == 'RedHat' ) or
@@ -32,7 +32,6 @@ cnt_podman_os_family: "
   {%- else -%}
     {{ 'NotSupported' }}
   {%- endif -%}
-  "
 
 # Inherit application properties from the main package
 cnt_podman_application_prereqs:
