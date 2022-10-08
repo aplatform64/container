@@ -1,8 +1,0 @@
----
-# Shared test variables
-test_cnt_kubectl_application_brew:
-  name: "kubectl"
-  type: "brew"
-  version: "latest"
-  installed: true
-...
