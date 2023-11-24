@@ -10,9 +10,9 @@ This collection is part of the [A:Platform64](https://github.com/aplatform64/apl
 
 | role                                                                          | purpose                        |
 | ----------------------------------------------------------------------------- | ------------------------------ |
-| [cnd_docker](https://aplatform64.readthedocs.io/en/latest/roles/cnd_docker)   | Manage provisioning of Docker  |
+| [cnt_docker](https://aplatform64.readthedocs.io/en/latest/roles/cnt_docker)   | Manage provisioning of Docker  |
 | [cnt_kubectl](https://aplatform64.readthedocs.io/en/latest/roles/cnt_kubectl) | Manage provisioning of KubeCtl |
-| [cnd_podman](https://aplatform64.readthedocs.io/en/latest/roles/cnd_podman)   | Manage provisioning of Podman  |
+| [cnt_podman](https://aplatform64.readthedocs.io/en/latest/roles/cnt_podman)   | Manage provisioning of Podman  |
 
 ## Deployment
 
@@ -36,7 +36,7 @@ Automatic installation is also available by deploying [A:Platform64](https://apl
 
 Help on implementing new features and maintaining the code base is welcomed.
 
-Please see the [guidelines](https://aplatform64.readthedocs.io/en/latest/contributing/CONTRIBUTING) for further details.
+Please see the [guidelines](https://aplatform64.readthedocs.io/en/latest/CONTRIBUTING.md) for further details.
 
 ## Author
 
